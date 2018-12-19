@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script>
+
+	// 普通对象：有__proto__属性
+	// 原型对象： prototype 对象
+	// 函数对象：凡是通过new Function()创建的都是函数对象， 拥有__proto__、prototype属性（指向原型对象） 
+	function Person(name){
+		this.name = name
+	}
+	function Mother(){}
+	Mother.prototype = {
+		age:18,
+		home:['Beijing','ShangeHai']
+	}
+	Person.prototype = new Mother()
+	var p1 = new Person('Jack')
+	var p2 = new Person('Mark')
+	// p1  
+	// p2  
+
+	p1.age = 20
+	p1.home[0] = 'Shenzhen' 
+	// p1
+	// p2
+
+	// delete p1.age  // p1
+
+	// Person.prototype.lastName = 'Jin'  // p1
+
+	// Person.prototype = {
+	// 	age: 28,
+	// 	address: {
+	// 		coutry: 'USA',
+	// 		city: 'Washington'
+	// 	}
+	// }
+	// var p3 = new Person('Obama') // p3
+	// Mother.prototype.no = 9527  // p1,p2,p3
+
+	// Mother.prototype = {
+	// 	car: 2,
+	// 	hobby: ['run','walk']
+	// }
+
+	// var p4 = new Person('Tony')  // p4
+	// Person.prototype = new Mother()
+	// var p5 = new Person('Luffy') // p5
+
+var a=1;
+var a;
+
+</script>
+</html>1111
